@@ -196,11 +196,11 @@ float Modulation(struct mono_voice *const voice)
 #endif
     if (modulationType == 0)
     {
-        return voice->modulationDepth * voice->modulationPitch * (sin((modSpeed * ((float)millis()) * 2.0f * PI / 1000.0f )));
+        return voice->modulationDepth * voice->modulationPitch * (sin((modSpeed * ((float)millis()) * 2.0f * PI / 1000.0f)));
     }
     else
     {
-        return voice->modulationDepth * voice->modulationPitch * (sin((modSpeed * ((float)millis()) * 2.0f * PI / 1000.0f )) >= 0 ? 0.0f : 1.0f);
+        return voice->modulationDepth * voice->modulationPitch * (sin((modSpeed * ((float)millis()) * 2.0f * PI / 1000.0f)) >= 0 ? 0.0f : 1.0f);
     }
 }
 
@@ -254,7 +254,7 @@ static uint32_t arp_pos = 0;
 static uint32_t arp_key = 0;
 
 /* this define controls the arpeggio playback speed */
-#define ARP_MAX	120
+#define ARP_MAX 120
 
 void Arp_Process(uint64_t elapsed_ms)
 {
@@ -551,6 +551,4 @@ void Synth_NoteOff(uint8_t ch, uint8_t note)
         Motor_NoteOff(&MonoVoice2, note);
     }
 }
-
-
 

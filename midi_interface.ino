@@ -49,7 +49,7 @@
 //#define DUMP_SERIAL2_TO_SERIAL
 
 /* constant to normalize midi value to 0.0 - 1.0f */
-#define NORM127MUL	0.007874f
+#define NORM127MUL  0.007874f
 
 inline void Midi_NoteOn(uint8_t ch, uint8_t note)
 {
@@ -101,12 +101,12 @@ inline void Midi_ControlChange(uint8_t channel, uint8_t data1, uint8_t data2)
     {
         if (channel < 10)
         {
-            Synth_SetSlider(channel,  data2 * NORM127MUL);
+            Synth_SetSlider(channel, data2 * NORM127MUL);
         }
     }
     if ((data1 == 18) && (channel == 1))
     {
-        Synth_SetSlider(8,  data2 * NORM127MUL);
+        Synth_SetSlider(8, data2 * NORM127MUL);
     }
 
     if ((data1 == 16) && (channel < 9))
@@ -116,7 +116,7 @@ inline void Midi_ControlChange(uint8_t channel, uint8_t data1, uint8_t data2)
     }
     if ((data1 == 18) && (channel == 0))
     {
-        Synth_SetRotary(8,  data2 * NORM127MUL);
+        Synth_SetRotary(8, data2 * NORM127MUL);
     }
 #endif
 }
@@ -157,7 +157,7 @@ inline void HandleShortMsg(uint8_t *data)
         break;
     /* pitchbend */
     case 0xe0:
-        Midi_PitchBend(ch, ((((uint16_t)data[1]) ) + ((uint16_t)data[2] << 8)));
+        Midi_PitchBend(ch, ((((uint16_t)data[1])) + ((uint16_t)data[2] << 8)));
     }
 }
 

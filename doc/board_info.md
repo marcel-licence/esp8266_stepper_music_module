@@ -4,11 +4,9 @@ Below you will find a list of build which can be configured and should compile w
 
 <hr>
 <a name="esp8266_esp8266_d1_mini"></a><b>Core:</b> <a h_ref="https://github.com/esp8266/Arduino">ESP8266 Boards </a><br />
-<b>Version:</b> 3.0.2<br />
+<b>Version:</b> 3.1.2<br />
 <b>Board:</b> LOLIN(WEMOS) D1 R2 & mini<br />
 <br />
-<b>Program storage space:</b> 279277 bytes<br />
-<b>Dynamic memory:</b> 29340 bytes<br />
 <br />
 <b>CPU Frequency:</b> 160 MHz<br />
 <b>VTables:</b> Flash<br />
